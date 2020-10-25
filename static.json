@@ -6,13 +6,13 @@
       "Access-Control-Allow-Origin": "*",
       "X-Author": "goss" 
     },
-    "/login": {
+    "/login/": {
       "Access-Control-Allow-Origin": "*",
     },
-    "/promise": {
+    "/promise/": {
       "Access-Control-Allow-Origin": "*",
     },
-    "/fetch": {
+    "/fetch/": {
       "Access-Control-Allow-Origin": "*",
     }      
   }
