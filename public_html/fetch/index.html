@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Клиентский сценарий</title><meta charset="utf-8">
+  <script>
+    var result;
+    async function sendReq(x){
+      try{
+         result  = await fetch(x.previousSibling.value)
+         .then(x => x.text());
+      } catch(e){
+         result = 'error';
+      }
+      document.title = result; // это просто так
+      x.previousSibling.value = result;
+      
+      // а это логгер
+      await fetch('//fork.kodaktor.ru/publog3?1234567890__' + x.previousSibling.value + ' !')
+      .then(x => x.text());
+      
+    }
+        
+  </script> 
+ </head>
+ <body>
+   <input id="inp"/><button id="bt" onclick="sendReq(this)" >Отправить</button>
+   
+ </body>
+</html>
